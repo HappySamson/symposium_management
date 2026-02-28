@@ -10,7 +10,7 @@ export default function Events() {
 
   useEffect(() => {
     axios
-      .get("https://symposium-management.onrender.com/api/contacts/api/events")
+      .get("https://symposium-management.onrender.com/api/events")
       .then(res => {
         setEvents(res.data);
         setLoading(false);
