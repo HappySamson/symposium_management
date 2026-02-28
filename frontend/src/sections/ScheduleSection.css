@@ -1,0 +1,98 @@
+/* SECTION */
+.schedule-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  /* 🎨 Replace video with gradient background */
+  background: linear-gradient(135deg, #0f0f27, #202143, #2c3464);
+}
+
+
+.schedule-content {
+  position: relative;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* TITLE */
+.schedule-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #00ffff;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #00ffff;
+}
+
+/* Each Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  left: -35px;
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  background: #00ffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* CARD */
+.schedule-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.time {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00ffff;
+}
+
+/* STATUS COLORS */
+.timeline-item.live .schedule-card {
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px #00ff88;
+}
+
+.timeline-item.upcoming .schedule-card {
+  border: 2px solid #00ffff;
+}
+
+.timeline-item.completed .schedule-card {
+  opacity: 0.5;
+}

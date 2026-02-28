@@ -1,0 +1,191 @@
+/* ========== LAYOUT ========== */
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-main {
+  flex: 1;
+  background: #f1f5f9;
+}
+
+.admin-header {
+  height: 60px;
+  background: white;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ========== SIDEBAR BASE ========== */
+.admin-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 240px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease, left 0.3s ease;
+  z-index: 1100;
+}
+
+/* Collapsed sidebar */
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+/* ========== SIDEBAR HEADER ========== */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  color: white;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ========== MENU ITEMS (ALIGNMENT FIX) ========== */
+.menu,
+.menu-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  color: #e5e7eb;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.menu i,
+.menu-title i:first-child {
+  font-size: 1.25rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* Hover & Active */
+.menu:hover,
+.menu-title:hover {
+  background: #334155;
+}
+
+.menu.active {
+  background: #6366f1;
+  color: white;
+}
+
+/* ========== DROPDOWN FIX (DOWNWARD) ========== */
+.dropdown .menu-title {
+  justify-content: flex-start;
+}
+
+.menu-title .bi-chevron-down {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow on open */
+.dropdown.open .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  flex-direction: column;
+  background: #0f172a;
+}
+
+.dropdown.open .submenu {
+  display: flex;
+}
+
+/* Submenu Items */
+.submenu-item {
+  padding: 10px 56px;
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.submenu-item:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.submenu-item.active {
+  background: #6366f1;
+  color: white;
+}
+
+/* ========== COLLAPSED MODE FIX ========== */
+.admin-sidebar.collapsed .menu,
+.admin-sidebar.collapsed .menu-title {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+.admin-sidebar.collapsed .menu i,
+.admin-sidebar.collapsed .menu-title i:first-child {
+  font-size: 1.4rem;
+}
+
+/* Hide text & arrows */
+.admin-sidebar.collapsed span,
+.admin-sidebar.collapsed .bi-chevron-down {
+  display: none;
+}
+
+/* Hide submenu when collapsed */
+.admin-sidebar.collapsed .submenu {
+  display: none !important;
+}
+
+/* ========== MOBILE SUPPORT ========== */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1200;
+  background: #6366f1;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1050;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+  }
+
+  .admin-sidebar.mobile-open {
+    left: 0;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}

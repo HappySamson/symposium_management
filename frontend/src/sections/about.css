@@ -1,0 +1,124 @@
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  padding: 120px 5%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f0f27, #202143, #2c3464);
+  color: #ffffff;
+}
+
+/* ===== TITLE ===== */
+
+.about-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffff;
+}
+
+/* ===== CONTENT BOX (Glass Effect) ===== */
+
+.about-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 30px;
+  transition: all 0.4s ease;
+  height: 90%;
+}
+
+.about-content:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 60px rgba(0,255,255,0.4);
+  border: 1px solid #00ffff;
+}
+
+/* ===== PARAGRAPHS ===== */
+
+.about-text {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+/* ===== LIST ===== */
+
+.about-list {
+  margin-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.about-list li:hover {
+  color: #00ffff;
+  transform: translateX(8px);
+  text-shadow: 0 0 8px #00ffff;
+}
+
+/* ===== IMAGE ===== */
+
+.about-img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 60px rgba(0,255,255,0.4);
+}
+
+/* ===== ANIMATION ===== */
+
+.about-content,
+.about-img {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.about-img {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  .about-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-section {
+    padding: 80px 5%;
+  }
+}

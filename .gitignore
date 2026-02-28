@@ -1,0 +1,10 @@
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Database backups
+backend/db_backup/
+*.bson
+*.metadata.json

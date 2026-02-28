@@ -1,0 +1,145 @@
+/* ============================= */
+/* EVENTS SECTION */
+/* ============================= */
+
+#events {
+  background: linear-gradient(135deg, #14142e, #171745);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Section Title */
+#events h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 15px #00f7ff;
+  letter-spacing: 1px;
+}
+
+#events h5{
+    color: #ffff;
+}
+
+#events p{
+    color: #fff;
+}
+
+/* ============================= */
+/* CARD DESIGN */
+/* ============================= */
+
+#events .card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 247, 255, 0.2);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+#events .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+  border: 1px solid #00f7ff;
+}
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+#events .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+#events .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* BADGE */
+/* ============================= */
+
+#events .badge {
+  background: linear-gradient(90deg, #00f7ff, #00c3ff);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+/* ============================= */
+/* DESCRIPTION TEXT */
+/* ============================= */
+
+#events p {
+  color: #fff;
+}
+
+/* ============================= */
+/* RULES */
+/* ============================= */
+
+#events h6 {
+  color: #00f7ff;
+}
+
+
+#events ol li {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+#events .table {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#events .table th {
+  background: rgba(0, 247, 255, 0.2);
+  color: #00f7ff;
+  font-weight: 600;
+}
+
+#events .table td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+#events .btn-primary {
+  background: linear-gradient(90deg, #00f7ff, #00c3ff);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+}
+
+#events .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.8);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  #events h2 {
+    font-size: 2rem;
+  }
+
+  #events .card {
+    border-radius: 14px;
+  }
+}

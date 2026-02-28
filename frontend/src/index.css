@@ -1,0 +1,11 @@
+/* Offset for fixed navbar */
+.section {
+  scroll-margin-top: 60px; /* match navbar height */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+

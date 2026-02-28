@@ -1,0 +1,160 @@
+/* ===== RESET ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f27;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== SECTION ===== */
+
+.team-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 5%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #0f0f27, #202143, #2c3464);
+}
+
+/* ===== TITLE ===== */
+
+.team-title {
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffff;
+}
+
+/* ===== LOADING ===== */
+
+.team-loading {
+  font-size: 18px;
+  color: #00ffff;
+  margin-top: 30px;
+}
+
+/* ===== GRID FIX ===== */
+
+.team-section .row {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ===== CARD ===== */
+
+.team-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Hover Interactive Effect */
+
+.team-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 60px rgba(0,255,255,0.4);
+  border: 1px solid #00ffff;
+}
+
+/* ===== IMAGE ===== */
+
+.team-img-wrapper {
+  overflow: hidden;
+}
+
+.team-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.08);
+}
+
+/* ===== CARD BODY ===== */
+
+.team-card-body {
+  padding: 22px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.team-role {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #00ffff;
+  color: #000;
+  margin-bottom: 12px;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+.team-info {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ===== ENTRANCE ANIMATION ===== */
+
+.team-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.team-section .col-md-3:nth-child(1) .team-card { animation-delay: 0.1s; }
+.team-section .col-md-3:nth-child(2) .team-card { animation-delay: 0.3s; }
+.team-section .col-md-3:nth-child(3) .team-card { animation-delay: 0.5s; }
+.team-section .col-md-3:nth-child(4) .team-card { animation-delay: 0.7s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  .team-title {
+    font-size: 36px;
+  }
+
+  .team-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 28px;
+  }
+
+  .team-section {
+    padding: 80px 5%;
+  }
+}

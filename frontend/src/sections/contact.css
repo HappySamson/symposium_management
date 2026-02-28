@@ -1,0 +1,124 @@
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  /* Same gradient style as schedule */
+  background: linear-gradient(135deg, #0f0f27, #202143, #2c3464);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+
+/* ============================= */
+/* CONTACT CONTENT */
+/* ============================= */
+
+.contact-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.contact-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: #00ffff;
+}
+
+
+/* ============================= */
+/* CONTACT CARD */
+/* ============================= */
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+
+/* ============================= */
+/* INPUT FIELDS */
+/* ============================= */
+
+.contact-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.contact-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.contact-input:focus {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  color: white;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.contact-btn {
+  background: greenyellow;
+  border: 2px solid greenyellow;
+  color: #000000;
+  font-weight: bold;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: greenyellow;
+  color: #0f0f27;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+
+/* ============================= */
+/* SUCCESS / ERROR STATUS */
+/* ============================= */
+
+.contact-success {
+  background: rgba(0, 255, 136, 0.2);
+  border: 1px solid #00ff88;
+  color: #ffffff;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+.contact-error {
+  background: rgba(255, 0, 64, 0.2);
+  border: 1px solid #ff0040;
+  color: #ff0040;
+  box-shadow: 0 0 15px #ff0040;
+}

@@ -1,0 +1,102 @@
+/* ===== NAVBAR BASE ===== */
+.custom-navbar {
+  background-color: #0b2c4a; /* Deep Navy Blue */
+  height: 75px;
+  padding: 0 30px;
+  border-top: 4px solid #ff8c00; /* Orange accent line */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* ===== BRAND ===== */
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+/* ===== LOGO ===== */
+.custom-navbar .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== NAV LINKS ===== */
+.custom-navbar .nav-link {
+  color: #e6f0ff !important;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.custom-navbar .nav-link:hover {
+  color: #ff8c00 !important; /* Orange hover */
+}
+
+/* ===== ACTIVE LINK ===== */
+.custom-navbar .nav-link.active {
+  color: #ff8c00 !important;
+  font-weight: 600;
+}
+
+/* ===== ADMIN BUTTON ===== */
+.custom-navbar .btn-outline-light {
+  border: 1px solid #ff8c00;
+  color: #ff8c00 !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .btn-outline-light:hover {
+  background-color: #ff8c00;
+  color: #0b2c4a !important;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 992px) {
+  .custom-navbar {
+    padding: 10px 20px;
+  }
+
+  .custom-navbar .nav-link {
+    margin: 6px 0;
+  }
+}
+
+/* ===== TOGGLER BUTTON ===== */
+.navbar-toggler {
+  border: none;
+  background-color: #ff8c00; /* Orange background */
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Hamburger icon color */
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Remove default outline */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #07223a; /* Dark navy */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
