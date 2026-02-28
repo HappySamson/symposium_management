@@ -11,7 +11,7 @@ export default function ScheduleSection() {
 
   const fetchSchedules = async () => {
     try {
-      const res = await axios.get("https://symposium-management.onrender.com/api/contacts/api/schedule");
+      const res = await axios.get("https://symposium-management.onrender.com/api/schedule");
       setSchedules(res.data);
     } catch (err) {
       console.error("Error fetching schedule:", err);
