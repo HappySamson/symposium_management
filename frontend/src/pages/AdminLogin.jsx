@@ -32,7 +32,7 @@ const AdminLogin = () => {
 
     try {
       const res = await axios.post(
-        "https://symposium-management.onrender.com/api/contacts/api/admin/login",
+        "https://symposium-management.onrender.com/api/admin/login",
         { email, password }
       );
 
