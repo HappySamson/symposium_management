@@ -42,7 +42,7 @@ export default function AdminBanners() {
 
     try {
       await axios.delete(
-        `https://symposium-management.onrender.com/api/contacts/api/admin/banners/${id}`
+        `https://symposium-management.onrender.com/api/admin/banners/${id}`
       );
 
       Swal.fire({
@@ -78,7 +78,7 @@ export default function AdminBanners() {
       }
 
       const res = await axios.put(
-        `https://symposium-management.onrender.com/api/contacts/api/admin/banners/${selectedBanner._id}`,
+        `https://symposium-management.onrender.com/api/admin/banners/${selectedBanner._id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -111,7 +111,7 @@ export default function AdminBanners() {
           <div className="col-lg-4 col-md-6" key={banner._id}>
             <div className="card shadow-sm h-100">
               <img
-                src={`https://symposium-management.onrender.com/api/contacts/${banner.image}`}
+                src={`https://symposium-management.onrender.com/${banner.image}`}
                 className="card-img-top"
                 style={{ height: "180px", objectFit: "cover" }}
               />
