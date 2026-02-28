@@ -74,7 +74,7 @@ export default function HeroBanner() {
                       }`}
                     >
                       <img
-                        src={`http://localhost:5000/${banner.image}`}
+                        src={`https://symposium-management.onrender.com/${banner.image}`}
                         className="hero-banner-img"
                         alt={banner.title}
                       />
