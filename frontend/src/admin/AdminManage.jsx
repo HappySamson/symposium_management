@@ -14,7 +14,7 @@ export default function AdminManage() {
     status: "Active",
   });
   const [isEditing, setIsEditing] = useState(false);
-  const API_URL = "http://localhost:5000/admins";
+  const API_URL = "https://symposium-management.onrender.com/admins";
 
   // ===== Fetch admins on mount =====
   useEffect(() => {
