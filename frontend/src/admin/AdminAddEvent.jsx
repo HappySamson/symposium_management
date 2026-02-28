@@ -53,7 +53,7 @@ export default function AdminAddEvent() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/events", form);
+      await axios.post("https://symposium-management.onrender.com/api/events", form);
 
       Swal.fire({
         icon: "success",
