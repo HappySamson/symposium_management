@@ -13,7 +13,7 @@ export default function AdminBanners() {
   const fetchBanners = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/banners"
+        "https://symposium-management.onrender.com/api/banners"
       );
       setBanners(res.data);
     } catch (err) {
