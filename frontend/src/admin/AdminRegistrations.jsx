@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import API from "../services/api";
 import Swal from "sweetalert2";
 
-const IMAGE_BASE_URL = "http://localhost:5000/";
+const IMAGE_BASE_URL = "https://symposium-management.onrender.com/";
 
 export default function AdminRegistrations() {
   const [data, setData] = useState([]);
@@ -113,7 +113,7 @@ export default function AdminRegistrations() {
             disabled={!selectedEvent}
             onClick={() =>
               window.open(
-                `http://localhost:5000/api/reports/csv/${selectedEvent}`,
+                `https://symposium-management.onrender.com/api/reports/csv/${selectedEvent}`,
                 "_blank"
               )
             }
@@ -126,7 +126,7 @@ export default function AdminRegistrations() {
             disabled={!selectedEvent}
             onClick={() =>
               window.open(
-                `http://localhost:5000/api/reports/excel/${selectedEvent}`,
+                `https://symposium-management.onrender.com/api/reports/excel/${selectedEvent}`,
                 "_blank"
               )
             }
@@ -139,7 +139,7 @@ export default function AdminRegistrations() {
             disabled={!selectedEvent}
             onClick={() =>
               window.open(
-                `http://localhost:5000/api/reports/pdf/${selectedEvent}`,
+                `https://symposium-management.onrender.com/api/reports/pdf/${selectedEvent}`,
                 "_blank"
               )
             }
