@@ -14,7 +14,7 @@ const AdminTeam = () => {
   });
 
   const fetchTeam = async () => {
-    const res = await axios.get("http://localhost:5000/api/team");
+    const res = await axios.get("https://symposium-management.onrender.com/api/team");
     setTeam(res.data);
   };
 
@@ -37,13 +37,13 @@ const AdminTeam = () => {
 
     if (editId) {
       await axios.put(
-        `http://localhost:5000/api/team/${editId}`,
+        `https://symposium-management.onrender.com/api/team/${editId}`,
         formData
       );
       setEditId(null);
     } else {
       await axios.post(
-        "http://localhost:5000/api/team",
+        "https://symposium-management.onrender.com/api/team",
         formData
       );
     }
@@ -72,7 +72,7 @@ const AdminTeam = () => {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/team/${id}`
+      `https://symposium-management.onrender.com/api/team/${id}`
     );
     fetchTeam();
   };
