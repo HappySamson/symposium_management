@@ -34,7 +34,7 @@ export default function EditEventModal({ event, onClose, refresh }) {
   const updateEvent = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/events/${form._id}`,
+        `https://symposium-management.onrender.com/api/events/${form._id}`,
         form
       );
 
