@@ -66,7 +66,7 @@ export default function EventRegisterModal({ event, onClose }) {
       formData.append("paymentScreenshot", paymentScreenshot);
 
       await axios.post(
-        "https://symposium-management.onrender.com/api/contacts/api/registrations",
+        "https://symposium-management.onrender.com/api/registrations",
         formData
       );
 
