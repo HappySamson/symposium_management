@@ -12,7 +12,7 @@ export default function AdminContacts() {
   // =========================
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/contacts");
+      const res = await axios.get("https://symposium-management.onrender.com/api/contacts");
 
       // ✅ FIX IS HERE
       setContacts(res.data.contacts);
