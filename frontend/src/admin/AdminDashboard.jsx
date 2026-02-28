@@ -20,7 +20,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/admin/dashboard")
+      .get("https://symposium-management.onrender.com/api/admin/dashboard")
       .then((res) => {
         setStats(res.data.stats || {});
         setRecent(res.data.recentRegistrations || []);
