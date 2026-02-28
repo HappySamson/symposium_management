@@ -21,7 +21,7 @@ const Contact = () => {
     setStatus("");
 
     try {
-      await axios.post("https://symposium-management.onrender.com/api/contacts/api/contacts", formData);
+      await axios.post("https://symposium-management.onrender.com/api/contacts", formData);
 
       setStatus("success");
       setFormData({
