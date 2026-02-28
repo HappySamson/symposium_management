@@ -27,7 +27,7 @@ export default function AdminEvents() {
     });
 
     if (confirm.isConfirmed) {
-      await axios.delete(`http://localhost:5000/api/events/${id}`);
+      await axios.delete(`https://symposium-management.onrender.com/api/events/${id}`);
       Swal.fire("Deleted!", "Event removed successfully.", "success");
       fetchEvents();
     }
