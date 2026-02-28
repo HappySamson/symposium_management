@@ -8,7 +8,7 @@ export default function AdminEvents() {
   const [editEvent, setEditEvent] = useState(null);
 
   const fetchEvents = async () => {
-    const res = await axios.get("http://localhost:5000/api/events");
+    const res = await axios.get("https://symposium-management.onrender.com/api/events");
     setEvents(res.data);
   };
 
