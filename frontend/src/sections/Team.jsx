@@ -4,12 +4,12 @@ import "./Team.css";
 
 const Team = () => {
   const [team, setTeam] = useState([]);
-  const [loading, setLoading] = useState(true);   // ✅ FIX ADDED
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState("");
 
   useEffect(() => {
     axios
-      .get("https://symposium-management.onrender.com/api/contacts/api/team")
+      .get("https://symposium-management.onrender.com/api/team")
       .then(res => {
         setTeam(res.data);
         setLoading(false);
