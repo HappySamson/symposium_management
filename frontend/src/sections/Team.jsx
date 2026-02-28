@@ -9,7 +9,7 @@ const Team = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/team")
+      .get("https://symposium-management.onrender.com/api/contacts/api/team")
       .then(res => {
         setTeam(res.data);
         setLoading(false);
