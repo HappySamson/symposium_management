@@ -19,7 +19,7 @@ const Register = () => {
   /* FETCH EVENT */
   useEffect(() => {
     axios
-      .get(`https://symposium-management.onrender.com/api/contacts/api/events/${eventId}`)
+      .get(`https://symposium-management.onrender.com/api/events/${eventId}`)
       .then(res => setEvent(res.data))
       .catch(() => setError("Event not found"));
   }, [eventId]);
@@ -37,7 +37,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "https://symposium-management.onrender.com/api/contacts/api/registrations",
+        "https://symposium-management.onrender.com/api/registrations",
         {
           ...formData,
           eventId,
