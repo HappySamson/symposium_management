@@ -10,7 +10,7 @@ export default function HeroBanner() {
 
   /* FETCH ACTIVE BANNERS */
   useEffect(() => {
-    API.get("/banners/active")
+    API.get("/api/banners/active")
       .then(res => setBanners(res.data))
       .catch(err => console.error(err));
   }, []);
