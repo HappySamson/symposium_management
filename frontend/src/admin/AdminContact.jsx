@@ -47,7 +47,7 @@ export default function AdminContacts() {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+        await axios.delete(`https://symposium-management.onrender.com/api/contacts/${id}`);
 
         // update UI without reload
         setContacts((prev) => prev.filter((c) => c._id !== id));
@@ -68,7 +68,7 @@ export default function AdminContacts() {
       setLoadingId(id);
 
       const res = await axios.put(
-        `http://localhost:5000/api/contacts/${id}`
+        `https://symposium-management.onrender.com/api/contacts/${id}`
       );
 
       if (res.data.success) {
