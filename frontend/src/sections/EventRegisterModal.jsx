@@ -66,7 +66,7 @@ export default function EventRegisterModal({ event, onClose }) {
       formData.append("paymentScreenshot", paymentScreenshot);
 
       await axios.post(
-        "http://localhost:5000/api/registrations",
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/registrations`,
         formData
       );
 

@@ -12,7 +12,7 @@ export default function AdminContacts() {
   // =========================
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/contacts");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contacts`);
 
       // ✅ FIX IS HERE
       setContacts(res.data.contacts);
@@ -47,7 +47,7 @@ export default function AdminContacts() {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+        await axios.delete(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contacts/${id}`);
 
         // update UI without reload
         setContacts((prev) => prev.filter((c) => c._id !== id));
@@ -68,7 +68,7 @@ export default function AdminContacts() {
       setLoadingId(id);
 
       const res = await axios.put(
-        `http://localhost:5000/api/contacts/${id}`
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contacts/${id}`
       );
 
       if (res.data.success) {

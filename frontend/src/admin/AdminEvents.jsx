@@ -8,7 +8,7 @@ export default function AdminEvents() {
   const [editEvent, setEditEvent] = useState(null);
 
   const fetchEvents = async () => {
-    const res = await axios.get("http://localhost:5000/api/events");
+    const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/events`);
     setEvents(res.data);
   };
 
@@ -27,7 +27,7 @@ export default function AdminEvents() {
     });
 
     if (confirm.isConfirmed) {
-      await axios.delete(`http://localhost:5000/api/events/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/events/${id}`);
       Swal.fire("Deleted!", "Event removed successfully.", "success");
       fetchEvents();
     }

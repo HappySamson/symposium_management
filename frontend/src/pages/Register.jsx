@@ -19,7 +19,7 @@ const Register = () => {
   /* FETCH EVENT */
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/${eventId}`)
+      .get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/events/${eventId}`)
       .then(res => setEvent(res.data))
       .catch(() => setError("Event not found"));
   }, [eventId]);
@@ -37,7 +37,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/registrations",
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/registrations`,
         {
           ...formData,
           eventId,

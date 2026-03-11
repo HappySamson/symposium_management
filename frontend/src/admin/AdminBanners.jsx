@@ -13,7 +13,7 @@ export default function AdminBanners() {
   const fetchBanners = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/banners"
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/banners`
       );
       setBanners(res.data);
     } catch (err) {
@@ -42,7 +42,7 @@ export default function AdminBanners() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/banners/${id}`
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/admin/banners/${id}`
       );
 
       Swal.fire({
@@ -78,7 +78,7 @@ export default function AdminBanners() {
       }
 
       const res = await axios.put(
-        `http://localhost:5000/api/admin/banners/${selectedBanner._id}`,
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/admin/banners/${selectedBanner._id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -111,7 +111,7 @@ export default function AdminBanners() {
           <div className="col-lg-4 col-md-6" key={banner._id}>
             <div className="card shadow-sm h-100">
               <img
-                src={`http://localhost:5000/${banner.image}`}
+                src={`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/${banner.image}`}
                 className="card-img-top"
                 style={{ height: "180px", objectFit: "cover" }}
               />

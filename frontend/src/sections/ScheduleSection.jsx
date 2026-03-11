@@ -11,7 +11,7 @@ export default function ScheduleSection() {
 
   const fetchSchedules = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/schedule");
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/schedule`);
       setSchedules(res.data);
     } catch (err) {
       console.error("Error fetching schedule:", err);

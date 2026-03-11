@@ -9,7 +9,7 @@ const Team = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/team")
+      .get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/team`)
       .then(res => {
         setTeam(res.data);
         setLoading(false);
